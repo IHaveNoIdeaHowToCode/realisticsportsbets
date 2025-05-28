@@ -18,8 +18,8 @@
   <title>LET'S GO GAMBLING</title>
 </head>
 
-<body class="debug">
-  <header class="bg-warning-emphasis p-2">
+<body class="debug bg-secondary">
+  <header class="bg-warning p-2">
     <h1>Banana Boat Sports Bets</h1>
   </header>
   <main class="py-3">
@@ -39,12 +39,24 @@
           <div class="p-3 bg-dark text-center rounded-pill team-location">
             <p id="teamOneRoster" class="mb-0 fs-1"></p>
           </div>
+          <div class="text-center mt-3">
+            <button onclick="betTeam(1, 5)" class="btn btn-outline-success fs-4 mb-1">Bet $5</button>
+            <button onclick="betTeam(1, 25)" class="btn btn-outline-success fs-4 mb-1">Bet $25</button>
+            <button onclick="betTeam(1, 100)" class="btn btn-outline-success fs-4 mb-1">Bet $100</button>
+            <button onclick="betTeam(1, bank)" class="btn btn-outline-success fs-4 mb-1">Bet it all!</button>
+          </div>
         </div>
 
         <div class="col-6">
           <h2>Team 2</h2>
           <div id="team-2" class="p-3 bg-dark text-center rounded-pill team-location">
             <p id="teamTwoRoster" class="mb-0 fs-1"></p>
+          </div>
+          <div class="text-center mt-3">
+            <button onclick="betTeam(1, 5)" class="btn btn-outline-warning fs-4 mb-1">Bet $5</button>
+            <button onclick="betTeam(1, 25)" class="btn btn-outline-warning fs-4 mb-1">Bet $25</button>
+            <button onclick="betTeam(1, 100)" class="btn btn-outline-warning fs-4 mb-1">Bet $100</button>
+            <button onclick="betTeam(1, bank)" class="btn btn-outline-warning fs-4 mb-1">Bet it all!</button>
           </div>
         </div>
       </div>
