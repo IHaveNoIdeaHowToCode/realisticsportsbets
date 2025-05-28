@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.team-location {
+  min-height: 20dvh;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px black;
+}
+
+#bank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
