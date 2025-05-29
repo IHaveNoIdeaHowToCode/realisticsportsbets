@@ -45,7 +45,7 @@ const players = [
 
 function drawTeam1() {
   const team1Container = document.getElementById('teamOneRoster')
-  team1Content = "";
+  let team1Content = "";
 
   players.forEach((player) => {
     if (player.teamNumber == 1) {
@@ -58,7 +58,7 @@ function drawTeam1() {
 
 function drawTeam2() {
   const team2Container = document.getElementById('teamTwoRoster')
-  team2Content = "";
+  let team2Content = "";
 
   players.forEach((player) => {
     if (player.teamNumber == 2) {
@@ -71,3 +71,68 @@ function drawTeam2() {
 
 drawTeam1()
 drawTeam2()
+
+//  BETTING FOR TEAM 1
+
+function calculateTeam1Score() {
+  let team1Skill = 0;
+
+  players.forEach((player) => {
+    if (player.teamNumber == 1) {
+      team1Skill += player.skill
+    }
+  });
+  console.log(team1Skill);
+}
+
+function calculateTeam2Score() {
+  let team2Skill = 0
+
+  players.forEach((player) => {
+    if (player.teamNumber == 2) {
+      team2Skill += player.skill
+    }
+  })
+  console.log(team2Skill)
+}
+
+function calculateScoreForTeam(teamNumber) {
+  let teamSkill = 0
+
+  players.forEach((player) => {
+    if (player.teamNumber == teamNumber) {
+      teamSkill += player.skill
+    }
+  })
+  console.log(teamSkill)
+  return teamSkill
+}
+
+function betFiveOnTeam1() {
+  let team1Skill = calculateScoreForTeam(1)
+  let team2Skill = calculateScoreForTeam(2)
+
+  if (team1Skill > team2Skill) {
+    bank += 25
+  }
+  else {
+    bank -= 25
+  }
+}
+
+// calculateTeamScore()
+
+// //  BETTING FOR TEAM 2
+// function betTeam2() {
+
+//   players.forEach((player) => {
+//     if (player.teamNumber == 2) {
+//       team2Skill += player.skill
+//     }
+//   });
+
+//   console.log(team2Skill);
+// }
+
+
+// betTeam2()
