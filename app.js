@@ -120,6 +120,42 @@ function betFiveOnTeam1() {
   }
 }
 
+function betTwentyFiveOnTeam1() {
+  let team1Skill = calculateScoreForTeam(1)
+  let team2Skill = calculateScoreForTeam(2)
+
+  if (team1Skill > team2Skill) {
+    bank += 25
+  }
+  else {
+    bank -= 25
+  }
+}
+
+function betOneHundredOnTeam1() {
+  let team1Skill = calculateScoreForTeam(1)
+  let team2Skill = calculateScoreForTeam(2)
+
+  if (team1Skill > team2Skill) {
+    bank += 100
+  }
+  else {
+    bank -= 100
+  }
+}
+
+function betItAllOnTeam1() {
+  let team1Skill = calculateScoreForTeam(1)
+  let team2Skill = calculateScoreForTeam(2)
+
+  if (team1Skill > team2Skill) {
+    bank * 2
+  }
+  else {
+    bank = 0
+  }
+}
+
 // calculateTeamScore()
 
 // //  BETTING FOR TEAM 2
